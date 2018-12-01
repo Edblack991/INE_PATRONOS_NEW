@@ -1,0 +1,110 @@
+﻿@model WebApp.Models.VotePresident
+
+@{
+    ViewBag.Title = "BoletaPresidente";
+}
+
+<img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
+
+
+<center>
+    <font size=12>
+        <strong>
+            Boleta de Votante
+        </strong>
+    </font>
+</center>
+
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="#"> Votaciones   </a></h1>
+            </div>
+        </div>
+        <!-- end #header -->
+        <div id="page">
+            <div id="page-bgtop">
+                <div id="page-bgbtm">
+                    <div id="content">
+                        <div class="post">
+                            <h2 class="title"><a href="#">Partidos </a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <img src="~/Images/LogosPartidosPoliticos/PartidoRevolucionarioInstitucional.png" width="150" height="150" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Partido Revolucionario Institucional</h4>
+                                    <p class="card-text">ID:1</p>
+                                    <p class="card-text">Nombre:JOSE ANTONIO MEADE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <img src="~/Images/LogosPartidosPoliticos/PartidoAccionNacional.png" width="150" height="150" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Partido Accion Nacional</h4>
+                                    <p class="card-text">ID:2</p>
+                                    <p class="card-text">Nombre:RICARDO ANAYA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <img src="~/Images/LogosPartidosPoliticos/Morena.png" width="160" height="150" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Morena</h4>
+                                    <p class="card-text">ID:3</p>
+                                    <p class="card-text">Nombre:ANDRES MANUEL LOPEZ OBRADOR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end #sidebar -->
+                    <div style="clear: both;">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <!-- end #page -->
+    </div>
+    <!-- end #footer -->
+</body>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Fecha", String.Format("{0:dd/MM/yyyy}", DateTime.Now))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdPresident, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdPresident, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdPresident, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Aceptar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Confirmacion";
+}
+
+<img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
+
+<div class="form-group">
+    <h2>Confirmacion</h2>
+</div>
+<div class="jumbotron">
+    <center>
+        <font size=12>
+            <h3>  ¿Estas seguró que deseas guardar tu voto?</h3>
+            <img src="~/Imagenes/question.png" />
+        </font>
+        <br />
+        <h3>
+            Unas vez que aceptes no podrás volver a acceder a la boleta<br /><br /><br />
+        </h3>
+        <br />
+        <br />
+        <div>
+            <center>
+                <button type="button" onclick="location.href='@Url.Action("Resultados","Home")'" class="btn btn-success">ACEPTAR</button>
+            </center>
+        </div>
+    </center>
+</div>

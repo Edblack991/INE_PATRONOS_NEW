@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "MostrarError";
+}
+
+<div class="form-group">
+    <h2>Error al Momento de ingresar</h2>
+</div>
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="jumbotron">
+        <div class="form-horizontal">
+            <hr />
+            <h1>Verifique la Clave del Lector y CIC</h1>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Atras" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+

@@ -1,0 +1,99 @@
+﻿@model WebApp.Models.Citizen
+
+@{
+    ViewBag.Title = "TuInformacion";
+}
+
+<body>
+    <img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
+
+    <center>
+        <font size=12>
+            <strong>
+                Tu Informacion
+            </strong>
+        </font>
+    </center>
+
+
+    <h1>
+        <strong>
+            <center>
+                <figure>
+                    ESTE ESPACIO ES PARA LA FOTO<br>
+                    <br>
+                    <br>
+                    <br>
+                    <figcaption> </figcaption>
+                </figure>
+                <h6>
+                    <figure></figure>
+                </h6>
+                <figure>
+                    <figcaption>    </figcaption>
+                </figure>
+            </center>
+        </strong>
+    </h1>
+    <P>
+        <center>
+            Nombre:
+        </center>
+    </P>
+    <P>
+        <center>
+            Sexo:
+        </center>
+    </P>
+    <P>
+        <center>
+            Fecha de nacimiento:
+        </center>
+    </P>
+    <P>
+        <center>
+            Domicilio:
+        </center>
+    </P>
+    <P>
+        <center>
+            Clave de elector:
+        </center>
+    </P>
+    <P>
+        <center>
+            Curp:
+        </center>
+    </P>
+    <P>
+        <center>
+            Año de registro:
+        </center>
+    </P>
+    <P>
+        <center>
+            Estado:                          Municipio:                          Sección:
+        </center>
+    </P>
+    <P>
+        <center>
+            Estado:                          Localidad:                          Emisión
+        </center>
+    </P>
+    <P>
+        <center>
+            Vigencia:                        CIC:
+        </center>
+    </P>
+    <br /><br />
+    <center>
+        <h3>
+            <strong>
+                ¿Es correcta tu información?<br />
+                <button type="button" onclick="location.href='@Url.Action("BoletaAlcalde","Home")'" class="btn btn-success">ACEPTAR</button>
+            </strong>
+        </h3>
+    </center>
+
+</body>
+

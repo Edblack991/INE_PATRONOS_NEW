@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApp.Models.VotePresident>
+
+@{
+    ViewBag.Title = "Resultados";
+}
+
+<img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
+
+<center>
+    <font size=12>
+        <strong>
+            Resultados
+        </strong>
+    </font>
+</center>
+<p><font size=5>Presidente.</font>
+<P>Votaciones De Los Presidentes</P>
+<table class="table">
+    <tr>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Presidente
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPresident)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<font size=5>Gobernador.</font>
+<p>Votaciones De Los Gobernadores</p>
+<p><font size=5>Alcalde.</font>
+<p>Votaciones De Los Alcaldes</p>
+
+<div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Aceptar" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>

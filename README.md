@@ -1,2 +1,2 @@
-# INE_PATRONOS_NEW
-Nuevo repositorio para trabajar la aplicación web patronos.
+# INE_Patronos
+Sistema automatizado para beneficiar y agilizar el proceso electoral, realizado en una aplicación web implementando el patrón MVC
